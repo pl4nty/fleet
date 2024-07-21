@@ -30,6 +30,7 @@ spec:
         heritage: {{ .Release.Service }}
         release: {{ .Release.Name }}
     spec:
+      ttlSecondsAfterFinished: 60
       restartPolicy: Never
       containers:
       - name: fleet-migration
